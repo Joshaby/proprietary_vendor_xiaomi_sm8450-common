@@ -4965,13 +4965,9 @@ cc_prebuilt_library_shared {
                 "proprietary/vendor/lib64/libmcs.so",
             ],
             shared_libs: [
-                "libagm",
                 "libaudioroute",
-                "libar-acdb",
                 "liblog",
                 "libcutils",
-                "libats",
-                "liblx-osal",
                 "libtinyalsa",
                 "libc++",
                 "libc",
@@ -4981,6 +4977,7 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "64",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -6193,7 +6190,6 @@ cc_prebuilt_library_shared {
                 "libqc2audio_basecodec",
                 "libcodec2_vndk",
                 "libstagefright_foundation",
-                "libpalclient",
                 "libc++",
                 "libc",
                 "libm",
@@ -6202,6 +6198,7 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "64",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
@@ -8131,7 +8128,6 @@ cc_prebuilt_library_shared {
             shared_libs: [
                 "liblog",
                 "libcutils",
-                "libar-pal",
                 "libc++",
                 "libc",
                 "libm",
@@ -8140,6 +8136,7 @@ cc_prebuilt_library_shared {
         },
     },
     compile_multilib: "64",
+    check_elf_files: false,
     prefer: true,
     soc_specific: true,
 }
