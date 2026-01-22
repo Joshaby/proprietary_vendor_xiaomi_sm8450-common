@@ -20576,30 +20576,6 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-    name: "ssgqmigd",
-    owner: "xiaomi",
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/bin/ssgqmigd",
-            ],
-            shared_libs: [
-                "liblog",
-                "libm",
-                "libc",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
     name: "ssgtzd",
     owner: "xiaomi",
     target: {
