@@ -520,12 +520,17 @@ cc_prebuilt_library_shared {
                 "libc++",
                 "libc",
                 "libm",
+                "libbase",
+                "libbinder_ndk",
+                "vendor.qti.diaghal-V1-ndk",
             ],
+            exclude_shared_libs: ["libqspm-mem-utils-vendor"],
         },
     },
     compile_multilib: "both",
     prefer: true,
     soc_specific: true,
+    check_elf_files: false,
 }
 
 cc_prebuilt_library_shared {
@@ -785,6 +790,7 @@ cc_prebuilt_library_shared {
                 "libc",
                 "libm",
                 "libdl",
+                "liblog",
             ],
         },
     },
@@ -1947,6 +1953,7 @@ cc_prebuilt_library_shared {
                 "libc",
                 "libm",
                 "libdl",
+                "libbase",
             ],
         },
     },
@@ -20576,30 +20583,6 @@ cc_prebuilt_binary {
 }
 
 cc_prebuilt_binary {
-    name: "ssgqmigd",
-    owner: "xiaomi",
-    target: {
-        android_arm: {
-            srcs: [
-                "proprietary/vendor/bin/ssgqmigd",
-            ],
-            shared_libs: [
-                "liblog",
-                "libm",
-                "libc",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "32",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
     name: "ssgtzd",
     owner: "xiaomi",
     target: {
@@ -21231,6 +21214,25 @@ cc_prebuilt_binary {
     },
     prefer: true,
     system_ext_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libOpenCL_adreno",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libOpenCL_adreno.so",
+            ],
+            shared_libs: ["libc++", "libcutils", "libvndksupport"],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
 }
 
 install_symlink {

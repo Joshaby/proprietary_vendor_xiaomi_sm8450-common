@@ -267,6 +267,7 @@ PRODUCT_PACKAGES += \
     libq3dtools_esx \
     libCB \
     libOpenCL \
+    libOpenCL_adreno \
     libadreno_app_profiles \
     libadreno_utils \
     libgpudataproducer \
@@ -954,7 +955,6 @@ PRODUCT_PACKAGES += \
     sensors.qti \
     shsusrd \
     sscrpcd \
-    ssgqmigd \
     ssgtzd \
     ssr_diag \
     ssr_setup \
