@@ -33,7 +33,7 @@ ________________________________________________________________________________
 
                 <!--Vendor Properties -->
                 <Prop Name="vendor.iop.enable_uxe" Value="0" />
-                <Prop Name="vendor.debug.enable.lm" Value="true" />
+                <Prop Name="vendor.debug.enable.lm" Value="false" />
                 <Prop Name="vendor.perf.iop_v3.enable" Value="false" Target="taro,cape,ukee" />
                 <Prop Name="vendor.perf.iop_v3.enable.debug" Value="false" />
                 <Prop Name="vendor.enable.prefetch" Value="false" />
@@ -42,7 +42,7 @@ ________________________________________________________________________________
                 <Prop Name="vendor.perf.test_avc" Value="false" />
                 <Prop Name="vendor.perf.fps_switch_hyst_time_secs" Value="10" />
                 <Prop Name="ro.vendor.perf.enable.prekill"        Value="false"     />
-                <Prop Name="vendor.debug.enable.memperfd"         Value="true"     />
+                <Prop Name="vendor.debug.enable.memperfd"         Value="false"     />
                 <Prop Name="vendor.enable.memperfd_MIN_RAM_in_KB" Value="1048576"  />
                 <Prop Name="vendor.enable.memperfd_MAX_RAM_in_KB" Value="12582912" />
                 <Prop Name="vendor.prekill_MIN_ADJ_to_Kill"       Value="800"  />
