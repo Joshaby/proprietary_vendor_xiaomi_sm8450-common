@@ -402,6 +402,7 @@ cc_prebuilt_library_shared {
                 "libc",
                 "libm",
                 "libdl",
+                "libadreno_utils",
             ],
         },
         android_arm64: {
@@ -550,6 +551,8 @@ cc_prebuilt_library_shared {
                 "libc",
                 "libm",
                 "libdl",
+                "liblog",
+                "libnativewindow",
             ],
         },
         android_arm64: {
@@ -562,6 +565,8 @@ cc_prebuilt_library_shared {
                 "libc",
                 "libm",
                 "libdl",
+                "liblog",
+                "libnativewindow",
             ],
         },
     },
@@ -21267,6 +21272,7 @@ cc_prebuilt_library_shared {
             srcs: [
                 "proprietary/vendor/lib64/libadreno_compiler_cl.so",
             ],
+            shared_libs: ["libc++", "libc", "libdl", "liblog", "libm"],
         },
     },
     compile_multilib: "64",
@@ -21285,6 +21291,25 @@ cc_prebuilt_library_shared {
             srcs: [
                 "proprietary/vendor/lib64/libgpu_tonemapper.so",
             ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libOpenCL_adreno",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/libOpenCL_adreno.so",
+            ],
+            shared_libs: ["libc++", "libcutils", "libvndksupport"],
         },
     },
     compile_multilib: "64",
