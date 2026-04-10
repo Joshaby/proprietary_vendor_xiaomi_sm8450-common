@@ -429,6 +429,7 @@ cc_prebuilt_library_shared {
                 "libc",
                 "libm",
                 "libdl",
+                "libadreno_utils",
             ],
         },
     },
@@ -16193,6 +16194,7 @@ cc_prebuilt_library_shared {
     compile_multilib: "64",
     prefer: true,
     system_ext_specific: true,
+    allow_undefined_symbols: true,
 }
 
 cc_prebuilt_library_shared {
@@ -16868,9 +16870,9 @@ android_app_import {
 }
 
 android_app_import {
-    name: "com.qualcomm.qti.gpudrivers.taro.api31",
+    name: "com.qualcomm.qti.gpudrivers.pineapple.api34",
     owner: "xiaomi",
-    apk: "proprietary/vendor/app/com.qualcomm.qti.gpudrivers.taro.api31/com.qualcomm.qti.gpudrivers.taro.api31.apk",
+    apk: "proprietary/vendor/app/com.qualcomm.qti.gpudrivers.pineapple.api34/com.qualcomm.qti.gpudrivers.pineapple.api34.apk",
     certificate: "platform",
     dex_preopt: {
         enabled: false,
@@ -20121,6 +20123,7 @@ cc_prebuilt_library_shared {
             srcs: [
                 "proprietary/vendor/lib64/libgpu_tonemapper.so",
             ],
+            shared_libs: ["libEGL", "libGLESv2", "libGLESv3", "libc++", "libc", "libcutils", "libdl", "libgrallocutils", "libhidlbase", "liblog", "libm", "libqdMetaData", "libui", "libutils"],
         },
     },
     compile_multilib: "64",
@@ -20139,7 +20142,7 @@ cc_prebuilt_library_shared {
             srcs: [
                 "proprietary/vendor/lib64/libOpenCL_adreno.so",
             ],
-            shared_libs: ["libc++", "libcutils", "libvndksupport"],
+            shared_libs: ["libc++", "libcutils", "libvndksupport", "liblog"],
         },
     },
     compile_multilib: "64",
