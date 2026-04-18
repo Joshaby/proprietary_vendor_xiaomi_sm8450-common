@@ -20123,6 +20123,7 @@ cc_prebuilt_library_shared {
             srcs: [
                 "proprietary/vendor/lib64/libgpu_tonemapper.so",
             ],
+            shared_libs: ["libEGL", "libGLESv2", "libGLESv3", "libc++", "libc", "libcutils", "libdl", "libgrallocutils", "libhidlbase", "liblog", "libm", "libqdMetaData", "libui", "libutils"],
         },
     },
     compile_multilib: "64",
@@ -20141,7 +20142,7 @@ cc_prebuilt_library_shared {
             srcs: [
                 "proprietary/vendor/lib64/libOpenCL_adreno.so",
             ],
-            shared_libs: ["libc++", "libcutils", "libvndksupport"],
+            shared_libs: ["libc++", "libcutils", "libvndksupport", "liblog"],
         },
     },
     compile_multilib: "64",
