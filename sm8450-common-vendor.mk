@@ -249,7 +249,6 @@ PRODUCT_PACKAGES += \
     libadreno_app_profiles \
     libadreno_utils \
     libgpudataproducer \
-    libgpu_tonemapper \
     libgsl \
     libkcl \
     libkernelmanager \

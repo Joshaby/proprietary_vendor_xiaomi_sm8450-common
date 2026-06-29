@@ -20113,25 +20113,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libgpu_tonemapper",
-    owner: "xiaomi",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/libgpu_tonemapper.so",
-            ],
-            shared_libs: ["libEGL", "libGLESv2", "libGLESv3", "libc++", "libc", "libcutils", "libdl", "libgrallocutils", "libhidlbase", "liblog", "libm", "libqdMetaData", "libui", "libutils"],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "libOpenCL_adreno",
     owner: "xiaomi",
     strip: {
