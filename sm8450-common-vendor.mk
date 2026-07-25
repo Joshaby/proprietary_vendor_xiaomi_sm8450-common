@@ -896,6 +896,7 @@ PRODUCT_PACKAGES += \
     sensors.qti \
     shsusrd \
     sscrpcd \
+    ssgqmigd64 \
     ssgtzd \
     ssr_diag \
     ssr_setup \
